@@ -1,7 +1,7 @@
 # build
-docker build -t ff/aspvisor .
+docker build -t 0xff/aspmysql .
 # run
-docker run -d ff/aspvisor
+docker run -d 0xff/aspmysql
 # inspect
 docker exec -i -t <container name> bash
 

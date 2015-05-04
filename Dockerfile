@@ -9,6 +9,10 @@ RUN apt-get update && \
     apt-get -y clean
 
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+COPY ./wwwroot /wwwroot
+
+WORKDIR /wwwroot
+RUN ["dnu", "restore"]
 
 EXPOSE 80 3306
 
